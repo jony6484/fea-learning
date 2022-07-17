@@ -1,0 +1,6 @@
+{
+    "poly_degree": 4,
+    "log_x" : false,
+    "norm_coef": true,
+    "norm_y": true
+}

@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  streamlit:
+    build: fea-gui
+    depends_on:
+      - fastapi
+    ports:
+      - 8501:8501
+    networks:
+      - proj_net
+    container_name: fea-gui
+
+  fastapi:
+    build: fea-learning
+    ports:
+      - 8000:8000
+    networks:
+      - proj_net
+    container_name: fea-engine
+        
+networks:
+    proj_net:
+        driver: bridge
